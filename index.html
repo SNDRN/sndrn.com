@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>SNDRN — Superintelligence, Discovery &amp; New Ventures</title>
-<meta name="description" content="SNDRN explores, builds and operates AI-native companies.">
+<meta name="description" content="SNDRN builds foundation products for the next AI-native companies.">
 <link rel="canonical" href="https://sndrn.com/">
 <meta name="theme-color" content="#000000">
 <meta name="color-scheme" content="dark">
@@ -12,7 +12,7 @@
 <meta property="og:site_name" content="SNDRN">
 <meta property="og:url" content="https://sndrn.com/">
 <meta property="og:title" content="SNDRN — Superintelligence, Discovery &amp; New Ventures">
-<meta property="og:description" content="We explore, build and operate AI-native companies.">
+<meta property="og:description" content="Building foundation products for the next AI-native companies.">
 <meta property="og:image" content="https://sndrn.com/og.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -25,7 +25,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter+Tight:wght@400..700&display=swap">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Organization","name":"SNDRN","legalName":"SNDRN LTDA","taxID":"59.021.241/0001-60","url":"https://sndrn.com","email":"i@sndrn.com","logo":"https://sndrn.com/brand/sndrn-icon-512.png","slogan":"Superintelligence, Discovery & New Ventures"}
+{"@context":"https://schema.org","@type":"Organization","name":"SNDRN","legalName":"SNDRN LTDA","url":"https://sndrn.com","email":"i@sndrn.com","logo":"https://sndrn.com/brand/sndrn-icon-512.png","slogan":"Superintelligence, Discovery & New Ventures"}
 </script>
 <script>document.documentElement.classList.add('js')</script>
 <style>
@@ -74,14 +74,20 @@ ol,ul{list-style:none;padding:0}
 /* Sections */
 .sec{padding-top:clamp(64px,8vw,112px)}
 .lab{padding-top:14px;border-top:1px solid var(--line);margin-bottom:clamp(24px,3.2vw,44px);color:var(--fg3)}
-.stmt{max-width:22ch;font-weight:500;font-size:clamp(2rem,4.6vw,4.5rem);line-height:1;letter-spacing:-.042em;text-wrap:balance}
-.sub{margin-top:clamp(16px,2vw,24px);max-width:40ch;text-wrap:balance;font-size:clamp(1.0625rem,1.5vw,1.375rem);line-height:1.4;color:var(--fg2)}
+.stmt{max-width:24ch;font-weight:500;font-size:clamp(2rem,4.6vw,4.5rem);line-height:1;letter-spacing:-.042em;text-wrap:balance}
 
+.rows{margin-top:clamp(40px,5.5vw,72px);padding-top:28px;border-top:1px solid var(--line)}
 .row{display:grid;grid-template-columns:72px minmax(0,1fr) auto;gap:10px 28px;padding-bottom:28px;margin-bottom:28px;border-bottom:1px solid var(--line)}
 .row:last-child{margin-bottom:0}
 .idx{color:var(--fg3);padding-top:9px}
 .row-h{font-weight:500;font-size:clamp(1.5rem,2.6vw,2.375rem);line-height:1.08;letter-spacing:-.034em;text-wrap:balance}
 .row-m{margin-top:12px;color:var(--fg3);text-wrap:pretty}
+.row-m+.row-m{margin-top:6px}
+.row-t{display:block;text-decoration:none}
+.row-t:hover{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:.12em}
+.row-t .arr{color:var(--fg3)}
+.cites a{white-space:nowrap;color:var(--fg2);text-decoration:underline;text-decoration-color:rgba(242,242,239,.3);text-underline-offset:3px;transition:color .2s}
+.cites a:hover{color:var(--fg);text-decoration-color:var(--fg)}
 .link{align-self:start;padding-top:9px;font-family:var(--mono);font-size:14px;letter-spacing:.02em;color:var(--fg);background:linear-gradient(currentColor,currentColor) 0 100%/100% 1px no-repeat;padding-bottom:2px;transition:opacity .2s}
 .link:hover{opacity:.7}
 
@@ -131,29 +137,20 @@ ol,ul{list-style:none;padding:0}
   <section class="sec" aria-labelledby="do-h">
     <div class="wrap">
       <h2 class="mono lab" id="do-h" data-r>What we do</h2>
-      <div data-r>
-        <p class="stmt">We explore, build and operate <span class="nw">AI-native</span> companies.</p>
-        <p class="sub">And we consult for teams building and operating their own.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="sec" aria-labelledby="res-h">
-    <div class="wrap">
-      <h2 class="mono lab" id="res-h" data-r>Results</h2>
-      <ol>
+      <p class="stmt" data-r>Building foundation products for the next <span class="nw">AI-native</span> companies.</p>
+      <ol class="rows">
         <li class="row" data-r>
           <span class="mono idx">R.01</span>
           <div>
-            <p class="row-h">The research hub for AI engineers and developers.</p>
-            <p class="mono row-m">2M+ users · Cited in research worldwide · Trusted by researchers at Harvard, Stanford, Tsinghua, USP, Airbnb, Gov. of Spain and Gov. of Brazil</p>
+            <a class="row-h row-t" href="https://metatext.io" target="_blank" rel="noopener">The research hub for AI engineers and developers.<span class="arr" aria-hidden="true"> ↗</span><span class="sr"> (opens in a new tab)</span></a>
+            <p class="mono row-m">2M+ users · Trusted by researchers at Harvard, Stanford, Tsinghua and USP</p>
+            <p class="mono row-m cites">Cited in <a href="https://aclanthology.org/2025.acl-long.1512/" target="_blank" rel="noopener" title="It&#39;s Not a Walk in the Park! Challenges of Idiom Translation in Speech-to-text Systems">ACL 2025</a> · <a href="https://aclanthology.org/2024.findings-naacl.247/" target="_blank" rel="noopener" title="Tokenizer Choice For LLM Training: Negligible or Crucial?">NAACL 2024 Findings</a> · <a href="https://doi.org/10.1145/3548606.3559388" target="_blank" rel="noopener" title="Understanding Real-world Threats to Deep Learning Models in Android Apps">ACM CCS 2022</a> · <a href="https://doi.org/10.1109/TVCG.2023.3326569" target="_blank" rel="noopener" title="Large-Scale Evaluation of Topic Models and Dimensionality Reduction Methods for 2D Text Spatialization">IEEE TVCG 2023</a> · <a href="https://aclanthology.org/2022.conll-1.4/" target="_blank" rel="noopener" title="Continual Learning for Natural Language Generations with Transformer Calibration">CoNLL 2022</a> · <a href="https://doi.org/10.3233/SW-212865" target="_blank" rel="noopener" title="Survey on English Entity Linking on Wikidata: Datasets and approaches">Semantic Web journal</a></p>
           </div>
-          <a class="link" href="https://metatext.io" target="_blank" rel="noopener">metatext.io ↗<span class="sr"> (opens in a new tab)</span></a>
         </li>
         <li class="row" data-r>
           <span class="mono idx">R.02</span>
           <div>
-            <p class="row-h">Decision models layer for any AI product, starting with LLM routers.</p>
+            <a class="row-h row-t" href="posts/llm-routing-decision-models/" data-post="llm-routing-decision-models">Decision models layer for any AI product, starting with LLM routers.<span class="arr" aria-hidden="true"> →</span></a>
             <p class="mono row-m">Decision models + calibrated decision models for each product</p>
           </div>
         </li>

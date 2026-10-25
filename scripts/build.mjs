@@ -415,10 +415,18 @@ async function main() {
   try { await copyPostAssets(POSTS_DIR); } catch { /* no posts folder */ }
   await writeFile(path.join(OUT, 'posts', 'index.html'), listPage(posts));
 
-  const home = await readFile(path.join(ROOT, 'index.html'), 'utf8');
+  let home = await readFile(path.join(ROOT, 'index.html'), 'utf8');
   const marker = /<!-- posts:start -->[\s\S]*?<!-- posts:end -->/;
   if (!marker.test(home)) fail('index.html is missing the <!-- posts:start --><!-- posts:end --> markers');
-  await writeFile(path.join(OUT, 'index.html'), home.replace(marker, `<!-- posts:start -->${homeSection(posts)}<!-- posts:end -->`));
+  home = home.replace(marker, `<!-- posts:start -->${homeSection(posts)}<!-- posts:end -->`);
+  // <a data-post="slug"> links only stay links once that post is published; until then they render as plain text.
+  const published = new Set(posts.map((p) => p.slug));
+  home = home.replace(/<a\b([^>]*?)\sdata-post="([^"]+)"([^>]*)>([\s\S]*?)<\/a>/g, (whole, pre, slug, post, inner) => {
+    if (published.has(slug)) return whole.replace(` data-post="${slug}"`, '');
+    const attrs = `${pre}${post}`.replace(/\s(href|target|rel)="[^"]*"/g, '');
+    return `<span${attrs}>${inner.replace(/<span class="arr"[^>]*>[\s\S]*?<\/span>/g, '')}</span>`;
+  });
+  await writeFile(path.join(OUT, 'index.html'), home);
 
   await writeFile(path.join(OUT, 'feed.xml'), feed(posts));
   await writeFile(path.join(OUT, 'sitemap.xml'), sitemap(posts));

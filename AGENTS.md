@@ -48,8 +48,11 @@ npm run new -- "Post title"  # scaffold posts/<slug>.md as a draft
   script. If the logo changes, regenerate them from `brand/`.
 - The posts list is injected between `<!-- posts:start -->` and `<!-- posts:end -->` at build
   time; keep both markers.
-- Sections: hero (halftone logo only) · What we do · Results · Team · Posts (when any exist) ·
-  footer (email only).
+- Links with `data-post="<slug>"` (e.g. the R.02 title) only render as links once that post is
+  published; until then the build turns them into plain text.
+- Sections: hero (halftone S only) · What we do (title + R.01/R.02, no "Results" label) · Team ·
+  Posts (when any exist) · footer (email only). Show only public info: no CNPJ, no domain names
+  as link text (titles link instead).
 
 ## Brand
 

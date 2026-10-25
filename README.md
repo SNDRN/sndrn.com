@@ -53,4 +53,4 @@ files need no fonts installed.
 
 ---
 
-SNDRN LTDA · CNPJ 59.021.241/0001-60 · [i@sndrn.com](mailto:i@sndrn.com)
+SNDRN · [i@sndrn.com](mailto:i@sndrn.com)
