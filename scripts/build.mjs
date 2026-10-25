@@ -12,7 +12,7 @@ const OUT = path.join(ROOT, '_site');
 const POSTS_DIR = path.join(ROOT, 'posts');
 const SITE = { url: 'https://sndrn.com', name: 'SNDRN', email: 'i@sndrn.com' };
 // Only these paths are published. Everything else in the repo (scripts, docs, workflows) stays private.
-const PUBLIC = ['index.html', 'favicon.svg', 'favicon-32.png', 'apple-touch-icon.png', 'og.png', 'brand'];
+const PUBLIC = ['index.html', 'CNAME', 'favicon.svg', 'favicon-32.png', 'apple-touch-icon.png', 'og.png', 'brand'];
 const WITH_DRAFTS = process.argv.includes('--drafts');
 const HOME_LIMIT = 6;
 
