@@ -1,0 +1,18 @@
+{
+  "name": "sndrn.com",
+  "private": true,
+  "type": "module",
+  "description": "SNDRN website: static homepage + Markdown posts, deployed to GitHub Pages",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "preview": "node scripts/build.mjs --drafts && node scripts/serve.mjs",
+    "new": "node scripts/new-post.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "marked": "^16.4.2",
+    "yaml": "^2.9.1"
+  }
+}

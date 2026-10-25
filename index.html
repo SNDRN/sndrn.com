@@ -20,6 +20,7 @@
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="alternate" type="application/atom+xml" title="SNDRN — Posts" href="feed.xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter+Tight:wght@400..700&display=swap">
@@ -84,6 +85,15 @@ ol,ul{list-style:none;padding:0}
 .link{align-self:start;padding-top:9px;font-family:var(--mono);font-size:14px;letter-spacing:.02em;color:var(--fg);background:linear-gradient(currentColor,currentColor) 0 100%/100% 1px no-repeat;padding-bottom:2px;transition:opacity .2s}
 .link:hover{opacity:.7}
 
+.posts{border-top:0}
+.post-row{display:grid;grid-template-columns:110px minmax(0,1fr) auto;gap:10px 28px;padding-bottom:26px;margin-bottom:26px;border-bottom:1px solid var(--line)}
+.posts li:last-child .post-row{margin-bottom:0}
+.post-row .idx{padding-top:9px}
+.pr-main{display:flex;flex-direction:column}
+.pr-go{padding-top:10px;color:var(--fg3);transition:color .2s}
+.post-row:hover .pr-go{color:var(--fg)}
+.post-row:hover .row-h{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:.12em}
+.all{display:inline-block;margin-top:24px}
 .logos{display:flex;flex-wrap:wrap;align-items:center;gap:28px clamp(28px,8vw,112px)}
 .logos svg{display:block;width:auto;fill:currentColor;opacity:.85}
 .lg-nubank{height:32px}.lg-apple{height:40px}.lg-ef{height:34px}
@@ -101,6 +111,8 @@ ol,ul{list-style:none;padding:0}
   .row{grid-template-columns:1fr;gap:8px}
   .idx{padding-top:0}
   .link{justify-self:start;margin-top:6px}
+  .post-row{grid-template-columns:1fr;gap:6px}
+  .post-row .idx,.pr-go{padding-top:0}
 }
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{transition-duration:.001ms!important;transition-delay:0s!important}
@@ -159,6 +171,7 @@ ol,ul{list-style:none;padding:0}
       </ul>
     </div>
   </section>
+<!-- posts:start --><!-- posts:end -->
 </main>
 
 <footer class="foot">
