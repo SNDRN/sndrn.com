@@ -31,7 +31,8 @@ npm run new -- "Post title"  # scaffold posts/<slug>.md as a draft
 
 - One file per post: `posts/<slug>.md` → `https://sndrn.com/posts/<slug>/`.
 - Front matter: `title` and `date` (YYYY-MM-DD) are required; optional `description`, `tags`,
-  `image` (cover + social preview), `image_alt`, `author`, `slug`, `draft`, `lang`.
+  `image` (cover + social preview), `image_alt`, `cover: false` (use `image` only for link
+  previews), `author`, `slug`, `draft`, `lang`.
   `posts/_example.md` is the reference template (files starting with `_` are never published).
 - Images go in `posts/images/` and are referenced relative to `posts/` (`images/chart.png`).
 - `draft: true` keeps a post off the site; `npm run preview` still shows it.

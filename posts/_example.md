@@ -7,6 +7,7 @@ date: 2026-10-25                          # required, YYYY-MM-DD
 tags: [routing, research]                 # optional
 image: images/example-cover.png           # optional cover + social preview image, relative to posts/
 image_alt: "What the cover image shows"   # optional
+cover: false                              # optional; keep `image` for link previews but don't show it on top
 author: SNDRN                             # optional (default SNDRN)
 slug: custom-url                          # optional; default is the file name -> /posts/<slug>/
 draft: true                               # optional; drafts are skipped unless you build with --drafts

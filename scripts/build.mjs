@@ -120,6 +120,7 @@ async function loadPosts() {
       tags: Array.isArray(data.tags) ? data.tags.map(String) : data.tags ? [String(data.tags)] : [],
       image: data.image || '',
       imageAlt: data.image_alt || '',
+      showCover: data.cover !== false,
       draft: data.draft === true,
       lang: data.lang || 'en',
       minutes: Math.max(1, Math.round(text.split(' ').length / 230)),
@@ -276,7 +277,7 @@ function postPage(p) {
   const root = '../../';
   const iso = p.date.toISOString();
   const ogImage = p.image ? absoluteFromPosts(p.image) : `${SITE.url}/og.png`;
-  const coverSrc = p.image ? (/^https?:\/\//i.test(p.image) ? p.image : p.image.startsWith('/') ? `${root}${p.image.slice(1)}` : `../${p.image}`) : '';
+  const coverSrc = p.image && p.showCover ? (/^https?:\/\//i.test(p.image) ? p.image : p.image.startsWith('/') ? `${root}${p.image.slice(1)}` : `../${p.image}`) : '';
   const ld = {
     '@context': 'https://schema.org', '@type': 'BlogPosting', headline: p.title, description: p.description,
     datePublished: iso, dateModified: iso, url: p.url, mainEntityOfPage: p.url, image: ogImage,
