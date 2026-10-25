@@ -146,7 +146,7 @@ a{color:inherit}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 .top{display:flex;justify-content:space-between;align-items:center;gap:24px;padding-top:clamp(20px,3vw,40px)}
 .top a{text-decoration:none}
-.brand{display:block;height:clamp(30px,3vw,40px);width:auto}
+.brand{display:block;height:clamp(36px,3.4vw,46px);width:auto}
 .top .mono{color:var(--fg3)}
 .top .mono:hover{color:var(--fg)}
 .chip{display:inline-flex;align-items:center;height:32px;padding:0 11px;background:var(--chip);color:var(--fg);font:500 14px/1 var(--sans);letter-spacing:-.005em;white-space:nowrap;text-decoration:none;border:0;cursor:pointer;transition:background-color .18s,color .18s}
@@ -268,7 +268,7 @@ ${extra}<style>${CSS}</style>`;
 }
 
 function topBar(root, link) {
-  return `<div class="wrap top"><a href="${root}" aria-label="SNDRN — home"><img class="brand" src="${root}brand/sndrn-lockup-white.svg" alt="SNDRN" width="130" height="40"></a>${link}</div>`;
+  return `<div class="wrap top"><a href="${root}" aria-label="SNDRN — home"><img class="brand" src="${root}brand/sndrn-mark-white.svg" alt="SNDRN" width="26" height="46"></a>${link}</div>`;
 }
 
 const FOOT = `<footer class="foot"><div class="wrap"><a class="ct-mail" href="mailto:${SITE.email}">${SITE.email}</a></div></footer>`;
