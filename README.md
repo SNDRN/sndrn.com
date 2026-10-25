@@ -1,6 +1,6 @@
 # sndrn.com
 
-Website for **SNDRN** — Superintelligence, Discovery & New Ventures.
+Website for **SNDRN.com** — building foundation products for the next AI-native companies.
 
 A static homepage plus Markdown posts. `npm run build` writes the public site to `_site/`;
 GitHub Pages builds and deploys it on every push to `main`
